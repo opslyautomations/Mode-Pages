@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------
+   "Ledger" tokens. Accent = BRAND_PRIMARY_HEX in /config/site.ts.
+   --------------------------------------------------------------- */
+:root {
+  --paper: #f7f5f0;
+  --paper-2: #efece4;
+  --ink: #15171a;
+  --ink-2: #4a4e55;
+  --rule: #d9d5cc;
+  --accent: #1f5f4a;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3ece7;
+  --warn: #9a5b13;
+  --bad: #8e2b2b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #111214;
+    --paper-2: #18191c;
+    --ink: #eceae4;
+    --ink-2: #a9acb2;
+    --rule: #2a2c30;
+    --accent: #3a9a7a; /* accent lightened ~12% for dark backgrounds */
+    --accent-ink: #0b1a14;
+    --accent-soft: #16261f;
+    --warn: #d99a4e;
+    --bad: #e07a7a;
+    color-scheme: dark;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.h1 {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1.05;
+}
+.h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.12;
+}
+
+.num,
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.prose-ledger p + p {
+  margin-top: 1em;
+}
+.prose-ledger h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0.75rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: background-color 150ms, color 150ms, border-color 150ms;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+.btn-ghost {
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  border-color: var(--ink-2);
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Visible 12-column grid hint on wide screens (thin page-edge rules) */
+.page-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 768px) {
+  .page-grid {
+    padding-inline: 32px;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Motion. Content is visible by default. RevealObserver adds
+   .js-reveal to <html> after mount; only then do reveals apply.
+   --------------------------------------------------------------- */
+.js-reveal [data-reveal]:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.js-reveal [data-reveal] {
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.ruler-tick {
+  transform-origin: bottom;
+}
+.js-reveal [data-reveal]:not(.is-visible) .ruler-tick {
+  transform: scaleY(0);
+}
+.js-reveal [data-reveal] .ruler-tick {
+  transition: transform 500ms ease;
+}
+
+.timeline-step {
+  transition: border-color 300ms ease, color 300ms ease;
+}
+.js-reveal [data-reveal].is-visible .timeline-step .step-num {
+  color: var(--accent);
+}
+
+.step-enter {
+  animation: step-in 180ms ease-out;
+}
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--paper-2), var(--rule), var(--paper-2));
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js-reveal [data-reveal]:not(.is-visible),
+  .js-reveal [data-reveal]:not(.is-visible) .ruler-tick {
+    opacity: 1;
+    transform: none;
+  }
+  .step-enter,
+  .skeleton {
+    animation: none;
+  }
+}
+
+/* Calendly inline widget */
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+}
+.calendly-inline-widget iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
