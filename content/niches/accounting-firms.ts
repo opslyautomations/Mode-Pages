@@ -42,7 +42,7 @@ export const accountingFirms: Niche = {
   ],
   hook: {
     quote: "Workplace AI agents need to learn how real firms handle close, review, client questions, and exceptions.",
-    body: "That judgment doesn't live in textbooks. It lives in your email threads and workpapers: the reviewer note that caught a misclassification, the client who sent the wrong statement twice, the partner who decided how to treat an exception. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. A firm with years of that history holds rare training material, and a licensed, de-identified copy can become a new revenue line from records you already own.",
+    body: "That judgment doesn't live in textbooks. It lives in your email threads and workpapers: the reviewer note that caught a misclassification, the client who sent the wrong statement twice, the partner who decided how to treat an exception. AI labs are actively buying workplace data now, and real company records are in short supply. A firm with years of that history holds rare training material, and a licensed, de-identified copy can become a new revenue line from records you already own.",
   },
   fitNotes: [
     "10+ employees who work at a desk.",

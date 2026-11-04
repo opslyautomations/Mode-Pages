@@ -114,8 +114,4 @@ export const GENERAL_FAQS = [
     q: "Who are you and how are you paid?",
     a: DISCLOSURE,
   },
-  {
-    q: "Is this the same as micro1's program?",
-    a: "Other buyers, including micro1, have announced similar programs. We work with one established buyer, and we name them on your call before anything is registered. Compare terms on scope control, de-identification, and fees.",
-  },
 ];

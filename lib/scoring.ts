@@ -101,19 +101,16 @@ export function score(a: Answers): ScoreResult {
     });
   }
 
-  // 6. Prior contact
-  if (a.priorContact === "buyer" || a.priorContact === "partner") {
+  // 6. Prior exposure. "spoken" may mean someone already registered them, so flag for a check.
+  if (a.priorContact === "spoken") {
     manualReview = true;
     reasons.push({
       id: "prior",
       status: "maybe",
-      text: "You've already been in touch about this. We'll check your registration status first.",
+      text: "You've already spoken with someone about this. We'll check your registration status first.",
     });
-  } else if (a.priorContact === "unsure") {
-    manualReview = true;
-    reasons.push({ id: "prior", status: "pass", text: "We'll quickly check whether you're already registered." });
   } else {
-    reasons.push({ id: "prior", status: "pass", text: "No prior registration." });
+    reasons.push({ id: "prior", status: "pass", text: a.priorContact === "read" ? "You've read about data licensing." : "New to data licensing." });
   }
 
   const tier: Tier = reasons.some((r) => r.status === "fail")

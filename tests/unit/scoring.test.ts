@@ -92,19 +92,19 @@ describe("ownership", () => {
   });
 });
 
-describe("prior contact", () => {
+describe("prior exposure", () => {
   it("no -> strong, no manual review", () => {
+    expect(s({ priorContact: "no" }).tier).toBe("strong");
     expect(s({ priorContact: "no" }).manualReview).toBe(false);
   });
-  it.each(["buyer", "partner"] as const)("%s -> possible + manual review", (priorContact) => {
-    const r = s({ priorContact });
+  it("read -> strong, no manual review", () => {
+    expect(s({ priorContact: "read" }).tier).toBe("strong");
+    expect(s({ priorContact: "read" }).manualReview).toBe(false);
+  });
+  it("spoken -> possible + manual review", () => {
+    const r = s({ priorContact: "spoken" });
     expect(r.tier).toBe("possible");
     expect(r.manualReview).toBe(true);
-  });
-  it("unsure -> manual review without downgrading", () => {
-    const r = s({ priorContact: "unsure" });
-    expect(r.manualReview).toBe(true);
-    expect(r.tier).toBe("strong");
   });
 });
 

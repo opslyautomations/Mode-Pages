@@ -42,7 +42,7 @@ export const lawFirms: Niche = {
   ],
   hook: {
     quote: "AI labs are prioritizing legal work product: how lawyers reason through matters, draft, negotiate, and decide.",
-    body: "Legal reasoning is hard to fake. The back-and-forth of a real matter (the first draft, the partner's markup, the client's pushback, the deadline that moved) is the kind of material that cannot be synthesized at scale. Firms that have run on email and practice-management software for years hold exactly that record. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. That is the reason to look at this now: demand is active today, and you decide whether any of it is a fit for your firm.",
+    body: "Legal reasoning is hard to fake. The back-and-forth of a real matter (the first draft, the partner's markup, the client's pushback, the deadline that moved) is the kind of material that cannot be synthesized at scale. Firms that have run on email and practice-management software for years hold exactly that record. AI labs are actively buying workplace data now, and real company records are in short supply. That is the reason to look at this now: demand is active today, and you decide whether any of it is a fit for your firm.",
   },
   fitNotes: [
     "6+ employees who work at a desk: attorneys, paralegals, and staff.",

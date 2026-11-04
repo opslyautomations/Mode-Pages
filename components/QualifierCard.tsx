@@ -17,7 +17,7 @@ import type { Reason, Tier } from "@/lib/scoring";
 import { track } from "@/lib/analytics";
 import { saveResult } from "@/lib/result-store";
 import { ThresholdRuler } from "./ThresholdRuler";
-import { EMAIL_CONSENT_TEXT, SMS_CONSENT_TEXT } from "@/config/site";
+import { EMAIL_CONSENT_TEXT, PARTNER_NAME, SMS_CONSENT_TEXT } from "@/config/site";
 
 /* ------------------------------------------------------------------ state */
 
@@ -564,8 +564,8 @@ function Question({ id, s, set, dispatch, errors }: QProps) {
       return (
         <Radios
           name="priorContact"
-          legend="Have you already talked to an AI data buyer or another referral partner about licensing your records?"
-          help="We ask so no one wastes your time; buyers work with whoever introduced you first."
+          legend="Have you looked into licensing your company's data before?"
+          help={`Any answer is fine. It just helps ${PARTNER_NAME} prepare for your call.`}
           options={PRIOR_CONTACT}
           value={s.priorContact}
           onChange={(v) => set("priorContact", v)}

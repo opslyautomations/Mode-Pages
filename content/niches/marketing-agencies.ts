@@ -42,7 +42,7 @@ export const marketingAgencies: Niche = {
   ],
   hook: {
     quote: "AI labs need examples of how teams scope, revise, push back, and ship.",
-    body: "Agencies generate this all day. A single campaign leaves a trail of briefs, revision rounds, scope debates, approvals, and late-night Slack threads, which is the clearest record anywhere of how collaborative knowledge work actually moves. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. The key question for agencies is ownership: only the records in your own workspace count.",
+    body: "Agencies generate this all day. A single campaign leaves a trail of briefs, revision rounds, scope debates, approvals, and late-night Slack threads, which is the clearest record anywhere of how collaborative knowledge work actually moves. AI labs are actively buying workplace data now, and real company records are in short supply. The key question for agencies is ownership: only the records in your own workspace count.",
   },
   fitNotes: [
     "20+ full-time desk employees.",

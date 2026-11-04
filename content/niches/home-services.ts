@@ -44,7 +44,7 @@ export const homeServices: Niche = {
   ],
   hook: {
     quote: "AI labs want to see how operations teams handle scheduling conflicts, callbacks, pricing decisions, and customer escalations.",
-    body: "A large office team generates years of it: the dispatcher juggling three no-heat calls and two techs, the CSR talking an upset customer down, the manager deciding whether a callback is warranty or billable. That is operational judgment that AI agents can't learn from manuals. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. But this program is sized for operators with a substantial office team, and we'd rather tell you that up front.",
+    body: "A large office team generates years of it: the dispatcher juggling three no-heat calls and two techs, the CSR talking an upset customer down, the manager deciding whether a callback is warranty or billable. That is operational judgment that AI agents can't learn from manuals. AI labs are actively buying workplace data now, and real company records are in short supply. But this program is sized for operators with a substantial office team, and we'd rather tell you that up front.",
   },
   fitNotes: [
     "20+ full-time desk employees: office, dispatch, CSRs, estimators, managers.",

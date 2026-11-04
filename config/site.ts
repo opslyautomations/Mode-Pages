@@ -11,7 +11,7 @@ const TODO = (key: string) => `TODO_${key}`;
 // ---------------------------------------------------------------------------
 export const SITE_NAME: string = "Growth Capital Opportunity";
 export const DOMAIN: string = TODO("DOMAIN"); // e.g. https://example.com (no trailing slash)
-export const PARTNER_NAME: string = TODO("PARTNER_NAME");
+export const PARTNER_NAME: string = "Nate Llorens";
 export const PARTNER_COMPANY: string = TODO("PARTNER_COMPANY");
 export const PARTNER_EMAIL: string = TODO("PARTNER_EMAIL");
 export const MAILING_ADDRESS: string = TODO("PHYSICAL_MAILING_ADDRESS"); // required for CAN-SPAM
