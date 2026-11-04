@@ -1,7 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Script from "next/script";
+
+const SCRIPT_ID = "calendly-widget-js";
+const SCRIPT_SRC = "https://assets.calendly.com/assets/external/widget.js";
 import { CALENDLY_QUESTION_MAP, CALENDLY_URL, isTodo } from "@/config/site";
 import { readAttributionClient } from "@/lib/attribution";
 import { track } from "@/lib/analytics";
@@ -80,9 +82,36 @@ export function CalendlyEmbed({ leadId, tier, stored }: { leadId: string; tier: 
       }
     }
     window.addEventListener("message", onMessage);
-    // If the script is already on the page (client navigation), init immediately.
-    init();
-    return () => window.removeEventListener("message", onMessage);
+
+    // Load Calendly's widget script once (only on pages that render this component),
+    // then initialise as soon as window.Calendly exists.
+    let poll: ReturnType<typeof setInterval> | undefined;
+    if (!isTodo(CALENDLY_URL)) {
+      if (window.Calendly) {
+        init();
+      } else {
+        let script = document.getElementById(SCRIPT_ID) as HTMLScriptElement | null;
+        if (!script) {
+          script = document.createElement("script");
+          script.id = SCRIPT_ID;
+          script.src = SCRIPT_SRC;
+          script.async = true;
+          document.body.appendChild(script);
+        }
+        script.addEventListener("load", init);
+        let tries = 0;
+        poll = setInterval(() => {
+          if (window.Calendly || ++tries > 100) {
+            clearInterval(poll);
+            init();
+          }
+        }, 200);
+      }
+    }
+    return () => {
+      window.removeEventListener("message", onMessage);
+      if (poll) clearInterval(poll);
+    };
   }, [init, leadId, tier]);
 
   if (isTodo(CALENDLY_URL)) {
@@ -95,7 +124,6 @@ export function CalendlyEmbed({ leadId, tier, stored }: { leadId: string; tier: 
 
   return (
     <div>
-      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" onLoad={init} onReady={init} />
       <div className="relative min-h-[700px] overflow-hidden rounded-card border border-rule">
         {!ready && (
           <div className="absolute inset-0 grid gap-4 p-6" aria-hidden="true">
@@ -104,7 +132,7 @@ export function CalendlyEmbed({ leadId, tier, stored }: { leadId: string; tier: 
             <div className="skeleton h-[520px] w-full rounded-card" />
           </div>
         )}
-        <div ref={ref} className="calendly-inline-widget relative w-full" style={{ minHeight: 700 }} />
+        <div ref={ref} className="calendly-embed relative w-full" style={{ minHeight: 700 }} />
       </div>
       <p className="sr-only" aria-live="polite">
         {booked ? "Your call is booked. Check your email for the calendar invite." : ""}

@@ -220,12 +220,12 @@ h3 {
   }
 }
 
-/* Calendly inline widget */
-.calendly-inline-widget {
+/* Calendly inline widget. Not named .calendly-inline-widget: Calendly auto-initialises that class and crashes without data-url. */
+.calendly-embed {
   min-width: 320px;
   height: 700px;
 }
-.calendly-inline-widget iframe {
+.calendly-embed iframe {
   width: 100%;
   height: 100%;
   border: 0;
