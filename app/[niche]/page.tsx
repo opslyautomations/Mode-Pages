@@ -54,10 +54,9 @@ export default async function NichePage({ params }: Props) {
         <FitStrip niche={niche} lastVerified={ELIGIBILITY_LAST_VERIFIED} />
       </Section>
 
-      {/* 3. What Mode is buying */}
-      {/* VERIFY co-branding rules with Mode */}
+      {/* 3. What's being licensed */}
       <Section
-        eyebrow="What Mode is buying"
+        eyebrow="What's being licensed"
         title="A de-identified copy of the work you already do"
         tone="paper-2"
         intro={

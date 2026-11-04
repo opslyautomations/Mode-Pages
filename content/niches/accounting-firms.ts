@@ -12,7 +12,7 @@ export const accountingFirms: Niche = {
   seo: {
     title: "CPA Firm Data Licensing for AI Training",
     description:
-      "CPA firm data licensing for AI: Mode licenses a de-identified copy of accounting and finance firm records. Firms with 10+ desk employees and 3+ years of records may qualify.",
+      "CPA firm data licensing for AI: Our data partner licenses a de-identified copy of accounting and finance firm records. Firms with 10+ desk employees and 3+ years of records may qualify.",
     keywords: [
       "CPA firm data licensing AI",
       "accounting firm AI training data",
@@ -23,7 +23,7 @@ export const accountingFirms: Niche = {
   hero: {
     eyebrow: "Accounting & finance firms",
     h1: "Accounting is one of the two categories AI labs want most. Your firm's history is the proof of how it's done.",
-    sub: "Mode licenses a de-identified copy of CPA and finance firm records for AI training. Firms with 10+ employees and several years of records may qualify.",
+    sub: "Our data partner licenses a de-identified copy of CPA and finance firm records for AI training. Firms with 10+ employees and several years of records may qualify.",
   },
   records: [
     "Client correspondence and email",
@@ -42,7 +42,7 @@ export const accountingFirms: Niche = {
   ],
   hook: {
     quote: "Workplace AI agents need to learn how real firms handle close, review, client questions, and exceptions.",
-    body: "That judgment doesn't live in textbooks. It lives in your email threads and workpapers: the reviewer note that caught a misclassification, the client who sent the wrong statement twice, the partner who decided how to treat an exception. AI labs are actively buying workplace data now, and Mode and other buyers are competing for supply. A firm with years of that history holds rare training material, and a licensed, de-identified copy can become a new revenue line from records you already own.",
+    body: "That judgment doesn't live in textbooks. It lives in your email threads and workpapers: the reviewer note that caught a misclassification, the client who sent the wrong statement twice, the partner who decided how to treat an exception. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. A firm with years of that history holds rare training material, and a licensed, de-identified copy can become a new revenue line from records you already own.",
   },
   fitNotes: [
     "10+ employees who work at a desk.",
@@ -57,7 +57,7 @@ export const accountingFirms: Niche = {
     },
     {
       q: "How does this fit with client confidentiality and AICPA rules?",
-      a: "Your confidentiality obligations are yours to confirm, so have counsel review the agreement against them. Mode removes or transforms identifiers before delivery, and you choose which systems, clients, and date ranges are in scope.",
+      a: "Your confidentiality obligations are yours to confirm, so have counsel review the agreement against them. Our data partner removes or transforms identifiers before delivery, and you choose which systems, clients, and date ranges are in scope.",
     },
     {
       q: "Can we exclude tax season data or specific clients?",
@@ -65,7 +65,7 @@ export const accountingFirms: Niche = {
     },
     {
       q: "Do we have to hand over passwords?",
-      a: "No. Your team signs in to approved systems itself. No credentials are shared with Mode or with us.",
+      a: "No. Your team signs in to approved systems itself. No credentials are shared with our data partner or with us.",
     },
     {
       q: "Will this disrupt busy season?",
@@ -77,7 +77,7 @@ export const accountingFirms: Niche = {
     },
     {
       q: "How long does it take?",
-      a: "Mode generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
+      a: "Our data partner generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
     },
   ],
   episode: todoEpisode("Accounting & Finance Firms"),

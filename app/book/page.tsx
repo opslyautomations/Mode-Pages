@@ -26,7 +26,7 @@ export default async function BookPage({ searchParams }: Props) {
       <p className="eyebrow mb-4">Book your call</p>
       <h1 className="h2 md:text-5xl">A 15-minute call with {PARTNER_NAME}</h1>
       <p className="mt-4 max-w-measure text-ink-2">
-        We&apos;ll confirm your details and, if everything checks out, introduce you to Mode for an estimate and a 14-day nonbinding letter of
+        We&apos;ll confirm your details and, if everything checks out, introduce you to our data partner for an estimate and a 14-day nonbinding letter of
         intent.
       </p>
       <div className="mt-10">

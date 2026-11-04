@@ -45,7 +45,7 @@ export const OWNERSHIP = [
 
 export const PRIOR_CONTACT = [
   { value: "no", label: "No" },
-  { value: "mode", label: "Yes, Mode directly" },
+  { value: "buyer", label: "Yes, a data buyer directly" },
   { value: "partner", label: "Yes, another partner" },
   { value: "unsure", label: "Not sure" },
 ] as const;

@@ -12,7 +12,7 @@ export const marketingAgencies: Niche = {
   seo: {
     title: "Marketing Agency Data Licensing for AI Training",
     description:
-      "Marketing agency data licensing: Mode licenses a de-identified copy of agency operating records for AI training. Agencies with 30+ desk employees and 3+ years of history may qualify.",
+      "Marketing agency data licensing: our data partner licenses a de-identified copy of agency operating records for AI training. Agencies with 20+ desk employees and 3+ years of history may qualify.",
     keywords: [
       "marketing agency data licensing",
       "agency AI training data",
@@ -23,7 +23,7 @@ export const marketingAgencies: Niche = {
   hero: {
     eyebrow: "Marketing & creative agencies",
     h1: "Your agency's Slack, briefs, and client threads show AI how creative work really happens.",
-    sub: "Mode licenses a de-identified copy of agency operating records for AI training. Agencies with 30+ desk employees and several years of history may qualify.",
+    sub: "Our data partner licenses a de-identified copy of agency operating records for AI training. Agencies with 20+ desk employees and several years of history may qualify.",
   },
   records: [
     "Briefs, creative reviews, and feedback rounds",
@@ -42,25 +42,25 @@ export const marketingAgencies: Niche = {
   ],
   hook: {
     quote: "AI labs need examples of how teams scope, revise, push back, and ship.",
-    body: "Agencies generate this all day. A single campaign leaves a trail of briefs, revision rounds, scope debates, approvals, and late-night Slack threads, which is the clearest record anywhere of how collaborative knowledge work actually moves. AI labs are actively buying workplace data now, and Mode and other buyers are competing for supply. The key question for agencies is ownership: only the records in your own workspace count.",
+    body: "Agencies generate this all day. A single campaign leaves a trail of briefs, revision rounds, scope debates, approvals, and late-night Slack threads, which is the clearest record anywhere of how collaborative knowledge work actually moves. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. The key question for agencies is ownership: only the records in your own workspace count.",
   },
   fitNotes: [
-    "30+ full-time desk employees.",
+    "20+ full-time desk employees.",
     "Only records your agency owns: your own workspace, inbox, and CRM.",
     "Data living in client-owned ad accounts, client CMSs, or client Google Workspaces is usually not yours to license. Check your MSAs.",
   ],
   faqs: [
     {
       q: "What about client confidentiality clauses in our MSAs?",
-      a: "Review your contracts first. Many MSAs restrict how client materials can be used, and those terms come before anything else. Scope can exclude client-identifying projects or whole accounts, and Mode removes or transforms identifiers before delivery.",
+      a: "Review your contracts first. Many MSAs restrict how client materials can be used, and those terms come before anything else. Scope can exclude client-identifying projects or whole accounts, and our data partner removes or transforms identifiers before delivery.",
     },
     {
       q: "What about white-label work we do for other agencies?",
       a: "Generally exclude it. If you produced work under another agency's brand, you may not own those records, so the safe default is to leave them out of scope.",
     },
     {
-      q: "Do freelancers and contractors count toward the 30?",
-      a: "The threshold is full-time desk employees, so freelancers and contractors generally don't count. Mode makes the final call on eligibility after reviewing your details.",
+      q: "Do freelancers and contractors count toward the 20?",
+      a: "The threshold is full-time desk employees, so freelancers and contractors generally don't count. Our data partner makes the final call on eligibility after reviewing your details.",
     },
     {
       q: "Does this compete with the AI services we sell?",
@@ -68,7 +68,7 @@ export const marketingAgencies: Niche = {
     },
     {
       q: "Do we have to hand over passwords?",
-      a: "No. Your team signs in to approved systems itself. No credentials are shared with Mode or with us.",
+      a: "No. Your team signs in to approved systems itself. No credentials are shared with our data partner or with us.",
     },
     {
       q: "What does it cost the agency?",
@@ -76,7 +76,7 @@ export const marketingAgencies: Niche = {
     },
     {
       q: "How long does it take?",
-      a: "Mode generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
+      a: "Our data partner generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
     },
   ],
   episode: todoEpisode("Marketing Agencies"),

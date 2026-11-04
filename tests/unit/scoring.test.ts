@@ -96,7 +96,7 @@ describe("prior contact", () => {
   it("no -> strong, no manual review", () => {
     expect(s({ priorContact: "no" }).manualReview).toBe(false);
   });
-  it.each(["mode", "partner"] as const)("%s -> possible + manual review", (priorContact) => {
+  it.each(["buyer", "partner"] as const)("%s -> possible + manual review", (priorContact) => {
     const r = s({ priorContact });
     expect(r.tier).toBe("possible");
     expect(r.manualReview).toBe(true);

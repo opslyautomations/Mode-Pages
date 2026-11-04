@@ -7,7 +7,7 @@ import { breadcrumbLd, faqLd, pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "FAQ: Licensing Company Records for AI Training",
   description:
-    "Plain-English answers about Mode's company data licensing program: what's licensed, de-identification, passwords, how offers are set, cost, timeline, and how we're paid.",
+    "Plain-English answers about our data partner's company data licensing program: what's licensed, de-identification, passwords, how offers are set, cost, timeline, and how we're paid.",
   path: "/faq",
 });
 
@@ -18,7 +18,7 @@ export default function FaqPage() {
         <header className="md:col-span-4">
           <p className="eyebrow mb-4">FAQ</p>
           <h1 className="h2 md:text-5xl">Common questions</h1>
-          <p className="mt-4 text-ink-2">Answers grounded in Mode&apos;s published terms. Mode makes all offers and decisions.</p>
+          <p className="mt-4 text-ink-2">Answers grounded in our data partner&apos;s published terms. Our data partner makes all offers and decisions.</p>
         </header>
         <div className="md:col-span-8">
           <AccordionFAQ faqs={GENERAL_FAQS} />

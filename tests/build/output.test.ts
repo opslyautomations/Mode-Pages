@@ -31,6 +31,11 @@ describe.skipIf(!built)("built output", () => {
     expect(hits.map((h) => path.relative(ROOT, h))).toEqual([]);
   });
 
+  it("never names the buyer: no standalone word \"Mode\" in any built page, feed, or llms.txt", () => {
+    const hits = files.filter((f) => /\bMode\b/.test(fs.readFileSync(f, "utf8")));
+    expect(hits.map((h) => path.relative(ROOT, h))).toEqual([]);
+  });
+
   it("routes manifest redirects never point at a forbidden domain", () => {
     const manifest = path.join(ROOT, ".next/routes-manifest.json");
     const text = fs.readFileSync(manifest, "utf8").toLowerCase();
@@ -47,10 +52,10 @@ describe.skipIf(!built)("built output", () => {
     expect(html).toContain("should have their own counsel review any data agreement");
   });
 
-  it("home services states the 30-desk reality above the fold", () => {
+  it("home services states the 20-desk reality above the fold", () => {
     const html = decode(fs.readFileSync(path.join(APP_OUT, "home-services.html"), "utf8"));
     const qualifierPos = html.indexOf('id="qualify"');
-    const noticePos = html.indexOf("If your office team is under 30");
+    const noticePos = html.indexOf("If your office team is under 20");
     expect(noticePos).toBeGreaterThan(-1);
     expect(noticePos).toBeLessThan(qualifierPos);
   });

@@ -42,15 +42,15 @@ export default function PrivacyPage() {
         <li>To show you your fit result and follow up about your inquiry.</li>
         <li>To prepare for your call with {PARTNER_NAME}.</li>
         <li>
-          With your agreement on that call, to register your company with Mode as our referral. Mode then handles your company&apos;s
+          With your agreement on that call, to register your company with our data partner as our referral. Our data partner then handles your company&apos;s
           information under its own privacy terms.
         </li>
-        <li>To record which referral partner introduced you first, as Mode credits the first partner to submit a company.</li>
+        <li>To record which referral partner introduced you first, as our data partner credits the first partner to submit a company.</li>
       </ul>
 
       <h2>Who we share it with</h2>
       <ul>
-        <li>Mode, as described above, only after you agree.</li>
+        <li>Our data partner, as described above, only after you agree.</li>
         <li>Service providers that run this site for us: hosting, our CRM, email delivery, scheduling (Calendly), and analytics.</li>
         <li>Authorities, if the law requires it.</li>
       </ul>

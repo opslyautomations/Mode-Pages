@@ -295,28 +295,13 @@ export function SystemsWall({ systems }: { systems: string[] }) {
 }
 
 /* -------------------------------------------------------------------------- */
-export function CredibilityNotes({ notes }: { notes: { label: string; value: string; source: string }[] }) {
-  return (
-    <dl className="grid gap-px overflow-hidden rounded-card border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
-      {notes.map((n) => (
-        <div key={n.label} className="bg-paper p-5">
-          <dt className="eyebrow">{n.label}</dt>
-          <dd className="mt-2 text-[15px]">{n.value}</dd>
-          <dd className="mt-1 font-mono text-xs text-ink-2">Source: {n.source}</dd>
-        </div>
-      ))}
-    </dl>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
 export function FitStrip({ niche, lastVerified }: { niche: Niche; lastVerified: string }) {
   return (
     <div className="grid gap-10 md:grid-cols-12">
       <div className="md:col-span-8">
         <ThresholdRuler
           highlight={niche.scoringKey}
-          caption={`Minimums as published by Mode. Last confirmed ${lastVerified}.`}
+          caption={`Minimums as published by our data partner. Last confirmed ${lastVerified}.`}
         />
       </div>
       <ul className="space-y-3 text-[15px] md:col-span-4">

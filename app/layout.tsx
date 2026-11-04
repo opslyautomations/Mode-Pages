@@ -25,7 +25,7 @@ for (const n of NICHES) {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: { default: SITE_NAME, template: `%s | ${SITE_NAME}` },
-  description: "Find out whether your firm qualifies for Mode's company data licensing program. A 90-second fit check from an independent referral partner.",
+  description: "Find out whether your firm qualifies for our data partner's company data licensing program. A 90-second fit check from an independent referral partner.",
   openGraph: { siteName: SITE_NAME, locale: "en_US", type: "website" },
   twitter: { card: "summary_large_image" },
 };

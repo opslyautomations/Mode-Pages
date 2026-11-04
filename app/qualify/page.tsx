@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Check If Your Firm Qualifies: 90-Second Fit Check",
   description:
-    "Eight questions, about 90 seconds. Find out whether your company is a strong fit, a possible fit, or not a fit right now for Mode's company data licensing program.",
+    "Eight questions, about 90 seconds. Find out whether your company is a strong fit, a possible fit, or not a fit right now for our data partner's company data licensing program.",
   path: "/qualify",
 });
 
@@ -30,7 +30,7 @@ export default async function QualifyPage({ searchParams }: Props) {
           Eight quick questions. You&apos;ll get an honest result: strong fit, possible fit, or not a fit right now. No dollar estimates, ever.
         </p>
         <div className="mt-10">
-          <ThresholdRuler highlight={nicheObj?.scoringKey} showYears caption={`Minimums as published by Mode. Last confirmed ${ELIGIBILITY_LAST_VERIFIED}.`} />
+          <ThresholdRuler highlight={nicheObj?.scoringKey} showYears caption={`Minimums as published by our data partner. Last confirmed ${ELIGIBILITY_LAST_VERIFIED}.`} />
         </div>
         <Disclosure className="mt-8 border-t border-rule pt-6" />
       </div>

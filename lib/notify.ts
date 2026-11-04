@@ -66,8 +66,8 @@ export async function sendFallbackEmail(payload: Record<string, unknown>): Promi
 export function buildFollowUpEmail(firstName: string, tier: Tier): { subject: string; text: string } {
   const next =
     tier === "not-yet"
-      ? "Based on your answers, your company doesn't meet one of Mode's published minimums today. Thresholds are set by Mode and may change."
-      : `The next step is a 15-minute call with ${PARTNER_NAME} to confirm details and introduce you to Mode. If you haven't booked a time yet, reply to this email and ${PARTNER_NAME} will call you.`;
+      ? "Based on your answers, your company doesn't meet one of our data partner's published minimums today. Thresholds are set by our data partner and may change."
+      : `The next step is a 15-minute call with ${PARTNER_NAME} to confirm details and introduce you to our data partner. If you haven't booked a time yet, reply to this email and ${PARTNER_NAME} will call you.`;
   const text = [
     `Hi ${firstName},`,
     "",
@@ -75,7 +75,7 @@ export function buildFollowUpEmail(firstName: string, tier: Tier): { subject: st
     "",
     next,
     "",
-    "Mode generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
+    "Our data partner generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
     "",
     PARTNER_NAME,
     PARTNER_COMPANY,

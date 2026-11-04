@@ -23,9 +23,9 @@ export default function TermsPage() {
 
       <h2>The fit check is informational</h2>
       <p>
-        The fit check compares your answers with eligibility minimums Mode has published. It is not an offer, an approval, or a valuation, and
-        it doesn&apos;t produce a dollar figure. Mode sets its own criteria, may change them at any time, and makes all offers and decisions.
-        A &quot;strong fit&quot; result does not mean Mode will make an offer.
+        The fit check compares your answers with eligibility minimums our data partner has published. It is not an offer, an approval, or a valuation, and
+        it doesn&apos;t produce a dollar figure. Our data partner sets its own criteria, may change them at any time, and makes all offers and decisions.
+        A &quot;strong fit&quot; result does not mean our data partner will make an offer.
       </p>
 
       <h2>Not professional advice</h2>
@@ -43,8 +43,7 @@ export default function TermsPage() {
       <h2>Site content</h2>
       <p>
         We try to keep the content accurate and current, including eligibility thresholds, but we can&apos;t promise it is complete or error
-        free. &quot;Mode&quot; is referred to by name only to describe the program; we are not affiliated with Mode beyond the referral
-        relationship described above.
+        free. We are not affiliated with our data partner beyond the referral relationship described above.
       </p>
 
       <h2>Limitation of liability</h2>

@@ -8,7 +8,7 @@ export function buildLlmsTxt(full: boolean): string {
   const lines: string[] = [];
   lines.push(`# ${SITE_NAME}`, "");
   lines.push(
-    `> ${SITE_NAME} helps companies find out whether they qualify for Mode's company data licensing program, in which Mode buys a de-identified, licensed copy of a company's historical operating records (email, documents, chat, CRM, billing) to supply AI labs training workplace agents. Companies keep their originals and systems, share no passwords, and pay no broker fee.`,
+    `> ${SITE_NAME} helps companies find out whether they qualify for our data partner's company data licensing program, in which our data partner buys a de-identified, licensed copy of a company's historical operating records (email, documents, chat, CRM, billing) to supply AI labs training workplace agents. Companies keep their originals and systems, share no passwords, and pay no broker fee.`,
     ""
   );
   lines.push(`Disclosure: ${DISCLOSURE}`, "");

@@ -564,8 +564,8 @@ function Question({ id, s, set, dispatch, errors }: QProps) {
       return (
         <Radios
           name="priorContact"
-          legend="Have you already contacted Mode or another referral partner about this?"
-          help="We ask so no one wastes your time; Mode works with whoever introduced you first."
+          legend="Have you already talked to an AI data buyer or another referral partner about licensing your records?"
+          help="We ask so no one wastes your time; buyers work with whoever introduced you first."
           options={PRIOR_CONTACT}
           value={s.priorContact}
           onChange={(v) => set("priorContact", v)}

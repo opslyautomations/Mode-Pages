@@ -9,7 +9,7 @@ const TODO = (key: string) => `TODO_${key}`;
 // ---------------------------------------------------------------------------
 // FILL THESE IN
 // ---------------------------------------------------------------------------
-export const SITE_NAME: string = TODO("SITE_NAME"); // podcast/brand name, NOT "Mode"
+export const SITE_NAME: string = "Growth Capital Opportunity";
 export const DOMAIN: string = TODO("DOMAIN"); // e.g. https://example.com (no trailing slash)
 export const PARTNER_NAME: string = TODO("PARTNER_NAME");
 export const PARTNER_COMPANY: string = TODO("PARTNER_COMPANY");
@@ -43,7 +43,7 @@ export const ELIGIBILITY_LAST_VERIFIED = process.env.ELIGIBILITY_LAST_VERIFIED |
 /** Safe absolute base URL for metadata even while DOMAIN is still TODO. */
 export const BASE_URL = DOMAIN.startsWith("http") ? DOMAIN : "http://localhost:3000";
 
-export const DISCLOSURE = `${SITE_NAME} is run by ${PARTNER_COMPANY}, an independent referral partner of Mode. We are compensated by Mode when a referred company completes a data licensing agreement. Your company pays us nothing. Mode makes all offers and decisions.`;
+export const DISCLOSURE = `${SITE_NAME} is run by ${PARTNER_COMPANY}, an independent referral partner of an AI training-data company (our data partner). We are compensated by our data partner when a referred company completes a data licensing agreement. Your company pays us nothing. Our data partner makes all offers and decisions.`;
 
 /** Bump whenever consent wording changes; stored with every lead. */
 export const CONSENT_VERSION = "2026-11-04.v1";
@@ -51,7 +51,7 @@ export const EMAIL_CONSENT_TEXT = `I agree to receive email from ${PARTNER_COMPA
 export const SMS_CONSENT_TEXT = `I agree to receive text messages from ${PARTNER_COMPANY} about this inquiry. Msg & data rates may apply. Reply STOP to opt out.`;
 
 export const INDICATIVE_RANGE =
-  "Mode's published range is $100K–$5M, indicative. Indicative only. Mode sets a fixed offer after reviewing your systems, history, and data volume.";
+  "Our data partner's published range is $100K–$5M, indicative. Indicative only. Our data partner sets a fixed offer after reviewing your systems, history, and data volume.";
 
 export function isTodo(value: string | null | undefined): boolean {
   return !value || value.startsWith("TODO_");

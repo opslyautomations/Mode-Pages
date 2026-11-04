@@ -5,7 +5,6 @@ import { Section, JsonLd } from "@/components/ui";
 import {
   AccordionFAQ,
   CTABand,
-  CredibilityNotes,
   HeroStatement,
   NicheSelector,
   NumberedTimeline,
@@ -13,13 +12,13 @@ import {
   SystemsWall,
 } from "@/components/blocks";
 import { EpisodeShelf } from "@/components/EpisodeShelf";
-import { CREDIBILITY_NOTES, GENERAL_FAQS, PROCESS_STEPS, RECORD_CATEGORIES, SYSTEMS } from "@/content/shared";
+import { GENERAL_FAQS, PROCESS_STEPS, RECORD_CATEGORIES, SYSTEMS } from "@/content/shared";
 import { faqLd, pageMetadata, podcastSeriesLd } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: `${SITE_NAME}: License Company Records for AI Training`,
   description:
-    "AI labs are paying for real examples of how professionals work. Mode buys a de-identified copy of company records. Check in 90 seconds whether your firm qualifies.",
+    "AI labs are paying for real examples of how professionals work. Our data partner buys a de-identified copy of company records. Check in 90 seconds whether your firm qualifies.",
   path: "/",
 });
 
@@ -29,7 +28,7 @@ export default function HomePage() {
       <HeroStatement
         eyebrow={`${SITE_NAME} · Company data licensing`}
         h1="Your firm's operating history may be worth more than you think."
-        sub="AI labs are paying for real examples of how professionals work. Mode buys a de-identified copy of company records. We help you find out if you qualify."
+        sub="AI labs are paying for real examples of how professionals work. Our data partner buys a de-identified copy of company records. We help you find out if you qualify."
         cta={
           <>
             <Link href="/qualify" className="btn btn-primary" data-cta="home-hero">
@@ -50,7 +49,7 @@ export default function HomePage() {
         <EpisodeShelf />
       </Section>
 
-      <Section eyebrow="What counts" title="What counts as operating records" intro="Mode licenses a copy of everyday work records across six categories. You choose which are in scope.">
+      <Section eyebrow="What counts" title="What counts as operating records" intro="Our data partner licenses a copy of everyday work records across six categories. You choose which are in scope.">
         <SpecSheet leftHeader="Category" rightHeader="Examples" rows={RECORD_CATEGORIES} />
       </Section>
 
@@ -60,10 +59,6 @@ export default function HomePage() {
 
       <Section eyebrow="The process" title="From first call to payment in about three months">
         <NumberedTimeline steps={PROCESS_STEPS} />
-      </Section>
-
-      <Section eyebrow="About Mode" title="Who's buying" tone="paper-2" intro="Factual notes about Mode, the buyer. We are an independent referral partner, not Mode.">
-        <CredibilityNotes notes={CREDIBILITY_NOTES} />
       </Section>
 
       <Section eyebrow="Questions" title="Common questions">

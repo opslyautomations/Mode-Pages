@@ -12,7 +12,7 @@ export const lawFirms: Niche = {
   seo: {
     title: "License Law Firm Data for AI Training",
     description:
-      "An AI training data program for law firms: Mode licenses a de-identified copy of firm records. Firms with 6+ desk employees and 3+ years of records may qualify. Check your fit in 90 seconds.",
+      "An AI training data program for law firms: Our data partner licenses a de-identified copy of firm records. Firms with 6+ desk employees and 3+ years of records may qualify. Check your fit in 90 seconds.",
     keywords: [
       "license law firm data for AI training",
       "AI training data program for law firms",
@@ -23,7 +23,7 @@ export const lawFirms: Niche = {
   hero: {
     eyebrow: "Law firms",
     h1: "Your firm's case history is exactly what AI labs are trying to learn from.",
-    sub: "Mode licenses a de-identified copy of law firm operating records to train AI on how legal work actually gets done. Firms with 6+ employees and several years of records may qualify.",
+    sub: "Our data partner licenses a de-identified copy of law firm operating records to train AI on how legal work actually gets done. Firms with 6+ employees and several years of records may qualify.",
   },
   records: [
     "Matter correspondence and email",
@@ -42,7 +42,7 @@ export const lawFirms: Niche = {
   ],
   hook: {
     quote: "AI labs are prioritizing legal work product: how lawyers reason through matters, draft, negotiate, and decide.",
-    body: "Legal reasoning is hard to fake. The back-and-forth of a real matter (the first draft, the partner's markup, the client's pushback, the deadline that moved) is the kind of material that cannot be synthesized at scale. Firms that have run on email and practice-management software for years hold exactly that record. AI labs are actively buying workplace data now, and Mode and other buyers are competing for supply. That is the reason to look at this now: demand is active today, and you decide whether any of it is a fit for your firm.",
+    body: "Legal reasoning is hard to fake. The back-and-forth of a real matter (the first draft, the partner's markup, the client's pushback, the deadline that moved) is the kind of material that cannot be synthesized at scale. Firms that have run on email and practice-management software for years hold exactly that record. AI labs are actively buying workplace data now, and our data partner and other buyers are competing for supply. That is the reason to look at this now: demand is active today, and you decide whether any of it is a fit for your firm.",
   },
   fitNotes: [
     "6+ employees who work at a desk: attorneys, paralegals, and staff.",
@@ -52,7 +52,7 @@ export const lawFirms: Niche = {
   faqs: [
     {
       q: "What about privilege and client confidentiality?",
-      a: "This is the first question to put to your own ethics counsel, and we encourage every firm to do that before signing anything. Mode removes or transforms identifiers before delivery, and you control which systems, matters, and date ranges are in scope. Many firms exclude privileged matters entirely. None of that resolves your professional obligations for you; your counsel confirms what is appropriate.",
+      a: "This is the first question to put to your own ethics counsel, and we encourage every firm to do that before signing anything. Our data partner removes or transforms identifiers before delivery, and you control which systems, matters, and date ranges are in scope. Many firms exclude privileged matters entirely. None of that resolves your professional obligations for you; your counsel confirms what is appropriate.",
     },
     {
       q: "Does the firm need client consent?",
@@ -64,11 +64,11 @@ export const lawFirms: Niche = {
     },
     {
       q: "Do we have to hand over passwords?",
-      a: "No. Your team signs in to the approved systems itself. No credentials are shared with Mode or with us.",
+      a: "No. Your team signs in to the approved systems itself. No credentials are shared with our data partner or with us.",
     },
     {
       q: "Who sees our original files?",
-      a: "No one outside your systems. Originals stay where they are. Mode works on the agreed copy in a secure workspace, de-identifies it, and only the filtered copy is supplied for AI research and training.",
+      a: "No one outside your systems. Originals stay where they are. Our data partner works on the agreed copy in a secure workspace, de-identifies it, and only the filtered copy is supplied for AI research and training.",
     },
     {
       q: "Does this affect our malpractice coverage?",
@@ -80,7 +80,7 @@ export const lawFirms: Niche = {
     },
     {
       q: "How long does it take?",
-      a: "Mode generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
+      a: "Our data partner generally expects about three months from the first conversation to payment. A written agreement fixes the amount, payment schedule, systems, date ranges, rights, and any exclusivity before any export.",
     },
   ],
   episode: todoEpisode("Law Firms"),

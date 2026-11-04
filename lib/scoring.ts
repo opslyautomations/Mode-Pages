@@ -42,12 +42,12 @@ export function score(a: Answers): ScoreResult {
   if (a.location === "us") {
     reasons.push({ id: "location", status: "pass", text: "Team based in the United States." });
   } else if (a.location === "ca_uk_au") {
-    reasons.push({ id: "location", status: "maybe", text: "Team based in Canada, the UK, or Australia. Mode must confirm." });
+    reasons.push({ id: "location", status: "maybe", text: "Team based in Canada, the UK, or Australia. Our data partner must confirm." });
   } else {
     reasons.push({
       id: "location",
       status: "fail",
-      text: "Most of your team is based in the EU or another region outside Mode's current program.",
+      text: "Most of your team is based in the EU or another region outside our data partner's current program.",
     });
   }
 
@@ -102,7 +102,7 @@ export function score(a: Answers): ScoreResult {
   }
 
   // 6. Prior contact
-  if (a.priorContact === "mode" || a.priorContact === "partner") {
+  if (a.priorContact === "buyer" || a.priorContact === "partner") {
     manualReview = true;
     reasons.push({
       id: "prior",

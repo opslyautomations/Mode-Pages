@@ -7,7 +7,7 @@ export const DESK_MINIMUMS = {
   legal: 6,
   accounting_finance: 10,
   medical: 10,
-  other: 30, // marketing agencies, home services, other, nonprofit
+  other: 20, // marketing agencies, home services, other, nonprofit
 } as const;
 
 export type EligibilityKey = keyof typeof DESK_MINIMUMS;

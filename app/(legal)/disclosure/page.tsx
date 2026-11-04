@@ -5,7 +5,7 @@ import { LEGAL_UPDATED, LegalPage } from "../LegalPage";
 
 export const metadata: Metadata = pageMetadata({
   title: "Disclosure: How We're Paid",
-  description: `${SITE_NAME} is run by an independent referral partner of Mode. Here's exactly how we're compensated.`,
+  description: `${SITE_NAME} is run by an independent referral partner of an AI training-data company. Here's exactly how we're compensated.`,
   path: "/disclosure",
 });
 
@@ -18,19 +18,20 @@ export default function DisclosurePage() {
       <h2>Who runs this site</h2>
       <p>
         {SITE_NAME} is a podcast and website operated by {PARTNER_COMPANY}. {PARTNER_NAME} is the person you&apos;ll speak with. We are an
-        independent referral partner. We are not employed by Mode and we are not Mode&apos;s agent. We can&apos;t make offers, set prices, or
-        approve eligibility on Mode&apos;s behalf.
+        independent referral partner. We are not employed by our data partner and we are not our data partner&apos;s agent. We can&apos;t make offers, set prices, or
+        approve eligibility on our data partner&apos;s behalf.
       </p>
       <h2>How the referral works</h2>
       <ul>
         <li>You complete our fit check. Your answers are recorded on this site first.</li>
         <li>If you&apos;re a strong or possible fit, you book a call with {PARTNER_NAME}.</li>
-        <li>On that call, with your agreement, {PARTNER_NAME} registers your company with Mode through our referral link.</li>
-        <li>Mode then reviews your company directly and makes any offer. Mode makes all offers and decisions.</li>
+        <li>On that call, with your agreement, {PARTNER_NAME} registers your company with our data partner through our referral link.</li>
+        <li>Our data partner then reviews your company directly and makes any offer. Our data partner makes all offers and decisions.</li>
+        <li>We name our data partner on your call, before anything is registered, so you can review their terms yourself.</li>
       </ul>
       <h2>How we&apos;re paid</h2>
       <p>
-        Mode compensates us when a company we referred completes a data licensing agreement. Your company pays us nothing, and there is no
+        Our data partner compensates us when a company we referred completes a data licensing agreement. Your company pays us nothing, and there is no
         broker fee. If you don&apos;t sign an agreement, we aren&apos;t paid.
       </p>
       <h2>What we don&apos;t do</h2>

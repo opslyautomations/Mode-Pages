@@ -10,7 +10,7 @@ import { CalendlyEmbed } from "./CalendlyEmbed";
 
 const HEADLINES: Record<Tier, string> = {
   strong: "Your firm meets every published minimum.",
-  possible: "You're close. One or two items need Mode to confirm.",
+  possible: "You're close. One or two items need our data partner to confirm.",
   "not-yet": "Not a fit yet.",
 };
 
@@ -74,7 +74,7 @@ export function ResultView({ tier, verifiedLeadId }: { tier: Tier; verifiedLeadI
         </p>
       )}
       {tier === "possible" && uncertain.length > 0 && (
-        <p className="mt-6 max-w-measure text-lg text-ink-2">Mode will need to confirm the items marked with a dash below.</p>
+        <p className="mt-6 max-w-measure text-lg text-ink-2">Our data partner will need to confirm the items marked with a dash below.</p>
       )}
 
       {reasons.length > 0 && (
@@ -109,14 +109,14 @@ export function ResultView({ tier, verifiedLeadId }: { tier: Tier; verifiedLeadI
       <div className="mt-12 border-t border-rule pt-10">
         {tier === "strong" && (
           <p className="max-w-measure text-lg">
-            Next step: a 15-minute call with {PARTNER_NAME} to confirm details and introduce you to Mode. Mode then provides an estimate and a
+            Next step: a 15-minute call with {PARTNER_NAME} to confirm details and introduce you to our data partner. Our data partner then provides an estimate and a
             14-day nonbinding letter of intent.
           </p>
         )}
         {tier === "possible" && (
           <p className="max-w-measure text-lg">
             Next step: a 15-minute call with {PARTNER_NAME} to go through the open items. If they check out, {PARTNER_NAME} introduces you to
-            Mode for an estimate and a 14-day nonbinding letter of intent.
+            our data partner for an estimate and a 14-day nonbinding letter of intent.
           </p>
         )}
 
@@ -148,7 +148,7 @@ export function ResultView({ tier, verifiedLeadId }: { tier: Tier; verifiedLeadI
         {tier === "not-yet" && (
           <div className="max-w-measure space-y-4">
             {isHomeServicesLowDesk && <p>Most home-service companies are field-heavy, so this is common.</p>}
-            <p>Thresholds are set by Mode and may change. Want us to tell you if they do?</p>
+            <p>Thresholds are set by our data partner and may change. Want us to tell you if they do?</p>
             {verifiedLeadId && emailFollowUp ? (
               notifyState === "done" ? (
                 <p className="font-medium text-accent">Done. We&apos;ll email you if the thresholds change.</p>
