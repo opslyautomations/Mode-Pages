@@ -15,7 +15,7 @@ const AI_AND_SEARCH_BOTS = [
   "Amazonbot",
 ];
 
-const DISALLOW = ["/api/", "/result/", "/book"];
+const DISALLOW = ["/api/"];
 
 export default function robots(): MetadataRoute.Robots {
   return {

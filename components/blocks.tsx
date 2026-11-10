@@ -256,7 +256,7 @@ export function NicheSelector() {
     <ul className="grid gap-px overflow-hidden rounded-card border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-5">
       {NICHES.map((n) => (
         <li key={n.slug} className="bg-paper">
-          <Link href={`/${n.slug}`} className="group flex h-full min-h-[180px] flex-col justify-between p-6 hover:bg-paper-2">
+          <Link href={`/?niche=${n.slug}#chat`} className="group flex h-full min-h-[180px] flex-col justify-between p-6 hover:bg-paper-2">
             <span className="font-serif text-xl font-semibold">{n.label}</span>
             <span className="mt-6 block">
               <span className="font-mono text-3xl text-accent num">{DESK_MINIMUMS[n.scoringKey]}+</span>
@@ -266,7 +266,7 @@ export function NicheSelector() {
         </li>
       ))}
       <li className="bg-paper">
-        <Link href="/qualify?niche=other" className="flex h-full min-h-[180px] flex-col justify-between p-6 hover:bg-paper-2">
+        <Link href="/#chat" className="flex h-full min-h-[180px] flex-col justify-between p-6 hover:bg-paper-2">
           <span className="font-serif text-xl font-semibold">Other business or nonprofit</span>
           <span className="mt-6 block">
             <span className="font-mono text-3xl text-accent num">{DESK_MINIMUMS.other}+</span>

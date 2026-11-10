@@ -15,7 +15,7 @@ export function buildLlmsTxt(full: boolean): string {
 
   lines.push("## Eligibility by industry", "");
   for (const n of NICHES) {
-    lines.push(`- [${n.label}](${BASE_URL}/${n.slug}): ${DESK_MINIMUMS[n.scoringKey]}+ full-time desk employees and ${MIN_YEARS}+ years of digital records the company owns.`);
+    lines.push(`- ${n.label}: ${DESK_MINIMUMS[n.scoringKey]}+ full-time desk employees and ${MIN_YEARS}+ years of digital records the company owns.`);
   }
   lines.push(`- Medical / dental: ${DESK_MINIMUMS.medical}+ desk employees. Other businesses and nonprofits: ${DESK_MINIMUMS.other}+.`, "");
 
@@ -24,9 +24,7 @@ export function buildLlmsTxt(full: boolean): string {
   lines.push("", TIMELINE_SENTENCE, TEAM_TIME_SENTENCE, AGREEMENT_SENTENCE, "", INDICATIVE_RANGE, "");
 
   lines.push("## Key pages", "");
-  lines.push(`- [Fit check (90 seconds)](${BASE_URL}/qualify)`);
-  lines.push(`- [How it works](${BASE_URL}/how-it-works)`);
-  lines.push(`- [FAQ](${BASE_URL}/faq)`);
+  lines.push(`- [Fit check chat and booking](${BASE_URL}/#chat)`);
   lines.push(`- [Disclosure](${BASE_URL}/disclosure)`, "");
 
   if (full) {

@@ -7,7 +7,7 @@ const WINDOW_SECONDS = 600;
 const MAX_REQUESTS = 8;
 const memory = new Map<string, { count: number; reset: number }>();
 
-export async function rateLimit(key: string): Promise<boolean> {
+export async function rateLimit(key: string, max: number = MAX_REQUESTS): Promise<boolean> {
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
 
@@ -23,7 +23,7 @@ export async function rateLimit(key: string): Promise<boolean> {
         cache: "no-store",
       });
       const data = (await res.json()) as { result: number }[];
-      return (data[0]?.result ?? 0) <= MAX_REQUESTS;
+      return (data[0]?.result ?? 0) <= max;
     } catch {
       // fall through to memory limiter
     }
@@ -39,5 +39,5 @@ export async function rateLimit(key: string): Promise<boolean> {
     return true;
   }
   entry.count += 1;
-  return entry.count <= MAX_REQUESTS;
+  return entry.count <= max;
 }

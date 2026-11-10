@@ -5,7 +5,6 @@ import { describe, expect, it } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
 import { FORBIDDEN_DOMAINS } from "@/config/banned-phrases";
-import { NICHES } from "@/content/niches";
 import { DISCLOSURE } from "@/config/site";
 
 const ROOT = path.resolve(__dirname, "../..");
@@ -42,21 +41,18 @@ describe.skipIf(!built)("built output", () => {
     for (const d of FORBIDDEN_DOMAINS) expect(text.includes(d)).toBe(false);
   });
 
-  it.each(NICHES.map((n) => [n.slug]))("niche page /%s renders the disclosure", (slug) => {
-    const html = decode(fs.readFileSync(path.join(APP_OUT, `${slug}.html`), "utf8"));
+  it("the single page renders the disclosure and the chat", () => {
+    const html = decode(fs.readFileSync(path.join(APP_OUT, "index.html"), "utf8"));
     expect(html).toContain(decode(DISCLOSURE));
+    expect(html).toContain('id="chat"');
   });
 
-  it.each(NICHES.filter((n) => n.regulated).map((n) => [n.slug]))("regulated page /%s shows the counsel note", (slug) => {
-    const html = fs.readFileSync(path.join(APP_OUT, `${slug}.html`), "utf8");
-    expect(html).toContain("should have their own counsel review any data agreement");
-  });
-
-  it("home services states the 20-desk reality above the fold", () => {
-    const html = decode(fs.readFileSync(path.join(APP_OUT, "home-services.html"), "utf8"));
-    const qualifierPos = html.indexOf('id="qualify"');
-    const noticePos = html.indexOf("If your office team is under 20");
-    expect(noticePos).toBeGreaterThan(-1);
-    expect(noticePos).toBeLessThan(qualifierPos);
+  it("only the landing page and legal pages are built as pages", () => {
+    const pages = files
+      .filter((f) => f.endsWith(".html"))
+      .map((f) => path.relative(APP_OUT, f))
+      .filter((f) => !f.startsWith("_"))
+      .sort();
+    expect(pages).toEqual(["disclosure.html", "index.html", "privacy.html", "terms.html"]);
   });
 });

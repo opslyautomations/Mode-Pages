@@ -11,8 +11,8 @@ export default function NotFound() {
           homepage
         </Link>{" "}
         or go straight to the{" "}
-        <Link href="/qualify" className="link">
-          90-second fit check
+        <Link href="/#chat" className="link">
+          2-minute fit check
         </Link>
         .
       </p>
